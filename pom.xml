@@ -11,7 +11,6 @@
 	<properties>
 		<platform.version>4.0.1.2</platform.version>
 		<android.plugin.version>3.6.0</android.plugin.version>
-		<android.sdk.path>/usr/java/adt-bundle-linux-x86_64/sdk</android.sdk.path>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <baracus.version>0.6.2-SNAPSHOT</baracus.version>
 	</properties>
@@ -69,4 +68,28 @@
         </repository>
     </repositories>
 
+    <profiles>
+        <profile>
+            <id>windows</id>
+            <properties>
+                <android.sdk.path>C:/adt-bundle-windows-x86-20130219/sdk</android.sdk.path>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>linux</id>
+            <properties>
+                <android.sdk.path>/usr/java/adt-bundle-linux-x86_64/sdk</android.sdk.path>
+            </properties>
+
+        </profile>
+
+        <profile>
+            <id>ci-system</id>
+            <properties>
+                <android.sdk.path>/usr/java/android-sdk-linux</android.sdk.path>
+            </properties>
+        </profile>
+
+    </profiles>
 </project>

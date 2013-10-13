@@ -4,8 +4,21 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import net.mantucon.baracus.annotations.Bean;
+import net.mantucon.baracus.service.CustomerService;
+import net.mantucon.baracus.util.Logger;
 
 public class HelloAndroidActivity extends Activity {
+
+    static final Logger logger = new Logger(HelloAndroidActivity.class);
+
+    static {
+        Logger.setTag("TUTORIAL_APP");
+    }
+
+    @Bean
+    CustomerService customerService;
 
     /**
      * Called when the activity is first created.
@@ -24,6 +37,10 @@ public class HelloAndroidActivity extends Activity {
 	// Inflate the menu; this adds items to the action bar if it is present.
 	getMenuInflater().inflate(net.mantucon.baracus.R.menu.main, menu);
 	return true;
+    }
+
+    public void onButtonTestClicked(View v) {
+        customerService.testService();
     }
 
 }
