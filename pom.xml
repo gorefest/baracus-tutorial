@@ -9,7 +9,7 @@
 	<name>baracus-tutorial</name>
 
 	<properties>
-		<platform.version>3.2</platform.version>
+		<platform.version>4.0.1.2</platform.version>
 		<android.plugin.version>3.6.0</android.plugin.version>
 		<android.sdk.path>/usr/java/adt-bundle-linux-x86_64/sdk</android.sdk.path>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,7 +48,7 @@
 				<artifactId>android-maven-plugin</artifactId>
 				<configuration>
 					<sdk>
-						<platform>13</platform>
+						<platform>14</platform>
 					</sdk>
 				</configuration>
 			</plugin>
