@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import net.mantucon.baracus.annotations.Bean;
+import net.mantucon.baracus.dao.BankAccountDao;
+import net.mantucon.baracus.service.BankAccountService;
 import net.mantucon.baracus.service.CustomerService;
 import net.mantucon.baracus.util.Logger;
 
@@ -19,6 +21,9 @@ public class HelloAndroidActivity extends Activity {
 
     @Bean
     CustomerService customerService;
+
+    @Bean
+    BankAccountService bankAccountService;
 
     /**
      * Called when the activity is first created.
@@ -41,6 +46,7 @@ public class HelloAndroidActivity extends Activity {
 
     public void onButtonTestClicked(View v) {
         customerService.testService();
+        bankAccountService.createAndOrDumpAccount();
     }
 
 }
