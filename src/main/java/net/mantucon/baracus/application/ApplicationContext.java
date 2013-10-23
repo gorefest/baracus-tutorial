@@ -4,6 +4,7 @@ import net.mantucon.baracus.context.BaracusApplicationContext;
 import net.mantucon.baracus.dao.BankAccountDao;
 import net.mantucon.baracus.dao.BaracusOpenHelper;
 import net.mantucon.baracus.service.BankAccountService;
+import net.mantucon.baracus.service.ConfigurationService;
 import net.mantucon.baracus.service.CustomerService;
 
 /**
@@ -19,6 +20,8 @@ public class ApplicationContext extends BaracusApplicationContext {
 
         registerBeanClass(CustomerService.class);
         registerBeanClass(BankAccountService.class);
+
+        registerBeanClass(ConfigurationService.class);
     }
 
 }
