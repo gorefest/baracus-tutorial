@@ -5,6 +5,7 @@ import net.mantucon.baracus.orm.Field;
 import net.mantucon.baracus.orm.FieldList;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,7 +19,7 @@ public class Customer extends AbstractModelBase {
 
     private String lastName;
     private String firstName;
-    private Collection<BankAccount> accounts;
+    private List<BankAccount> accounts;
 
     public static final FieldList fieldList = new FieldList(Customer.class.getSimpleName());
     public static final Field lastNameCol = new Field("last_name", columnIndex++);
@@ -51,11 +52,11 @@ public class Customer extends AbstractModelBase {
         this.firstName = firstName;
     }
 
-    public Collection<BankAccount> getAccounts() {
+    public List<BankAccount> getAccounts() {
         return accounts;
     }
 
-    public void setAccounts(Collection<BankAccount> accounts) {
+    public void setAccounts(List<BankAccount> accounts) {
         this.accounts = accounts;
     }
 }

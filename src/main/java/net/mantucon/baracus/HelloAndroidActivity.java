@@ -17,6 +17,8 @@ import net.mantucon.baracus.service.ConfigurationService;
 import net.mantucon.baracus.service.CustomerService;
 import net.mantucon.baracus.util.Logger;
 
+import java.util.List;
+
 public class HelloAndroidActivity extends Activity {
 
     static final Logger logger = new Logger(HelloAndroidActivity.class);
@@ -89,10 +91,15 @@ public class HelloAndroidActivity extends Activity {
     }
 
     public void onButtonTestClicked(View v) {
-        customerService.testService();
-        bankAccountService.createAndOrDumpAccount();
-        ApplicationContext.destroy(true);
-        ApplicationContext.initApplicationContext();
+
+        List<Customer> allCustomers = customerDao.loadAll();
+
+        for (Customer customer : allCustomers) {
+            List<BankAccount> customerAccounts = customer.getAccounts();
+            for (BankAccount account : customerAccounts) {
+                logger.info("Customer $1 $2 --- account --> $3/$4", customer.getFirstName(),customer.getLastName(), account.getBankName(), account.getIban());
+            }
+        }
     }
 
 }
