@@ -1,8 +1,6 @@
 package net.mantucon.baracus.model;
 
-import net.mantucon.baracus.orm.AbstractModelBase;
-import net.mantucon.baracus.orm.Field;
-import net.mantucon.baracus.orm.FieldList;
+import net.mantucon.baracus.orm.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,16 +14,19 @@ public class BankAccount extends AbstractModelBase {
 
     private String bankName;
     private String iban;
+    private Reference<Customer> customerReference;
 
     public static final FieldList fieldList = new FieldList(BankAccount.class.getSimpleName());
     public static final Field bankNameCol = new Field("bank_name", columnIndex++);
     public static final Field ibanCol = new Field("iban", columnIndex++);
+    public static final Field customerIdCol = new Field("customerId", columnIndex++);
 
 
     static {
         fieldList.add(AbstractModelBase.fieldList);
         fieldList.add(bankNameCol);
         fieldList.add(ibanCol);
+        fieldList.add(customerIdCol);
     }
 
     public BankAccount() {
@@ -46,6 +47,22 @@ public class BankAccount extends AbstractModelBase {
 
     public void setIban(String iban) {
         this.iban = iban;
+    }
+
+    public Reference<Customer> getCustomerReference() {
+        return customerReference;
+    }
+
+    public void setCustomerReference(Reference<Customer> customerReference) {
+        this.customerReference = customerReference;
+    }
+
+    public Customer getCustomer() {
+        return customerReference.getObject();
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customerReference = new ObjectReference<Customer>(customer);
     }
 
 }
