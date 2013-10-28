@@ -92,6 +92,7 @@ public class HelloAndroidActivity extends Activity {
 
     public void onButtonTestClicked(View v) {
 
+        // Demonstrate Customer 1:N Lazy Loading
         List<Customer> allCustomers = customerDao.loadAll();
 
         for (Customer customer : allCustomers) {
@@ -99,6 +100,12 @@ public class HelloAndroidActivity extends Activity {
             for (BankAccount account : customerAccounts) {
                 logger.info("Customer $1 $2 --- account --> $3/$4", customer.getFirstName(),customer.getLastName(), account.getBankName(), account.getIban());
             }
+        }
+
+        // Demontrate BankAccount N:1 Lazy Loading
+        List<BankAccount> allBankAccounts = bankAccountDao.loadAll();
+        for (BankAccount account : allBankAccounts){
+            logger.info("Bank Account $1 / $2 --- customer ---> $1 $2", account.getBankName(), account.getIban(), account.getCustomer().getFirstName(), account.getCustomer().getLastName());
         }
     }
 
