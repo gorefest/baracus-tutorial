@@ -1,1 +1,8 @@
-This file was created by IntelliJ IDEA 12.1.6 for binding GitHub repository
+BUILDING THE EXAMPLES
+
+You MUST set the sdk path (I am developing and compiling under several machines, so there are profiles!) and activate
+Your matching profile on a maven build.
+
+Example : Windows Machine, Android SDK under C:\sdk\android\
+-> Modify the pom's android.sdk.path in the windows profile and build the app via mvn clean install -Pwindows
+
