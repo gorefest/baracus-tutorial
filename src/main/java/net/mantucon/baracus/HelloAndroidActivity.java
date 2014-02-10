@@ -1,10 +1,13 @@
 package net.mantucon.baracus;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ExpandableListView;
 import net.mantucon.baracus.annotations.Bean;
 import net.mantucon.baracus.application.ApplicationContext;
 import net.mantucon.baracus.dao.BankAccountDao;
@@ -17,6 +20,7 @@ import net.mantucon.baracus.service.ConfigurationService;
 import net.mantucon.baracus.service.CustomerService;
 import net.mantucon.baracus.util.Logger;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class HelloAndroidActivity extends Activity {
@@ -42,6 +46,7 @@ public class HelloAndroidActivity extends Activity {
     @Bean
     BankAccountDao bankAccountDao;
 
+    ExpandableListView expandableListView;
 
 
 
@@ -60,6 +65,11 @@ public class HelloAndroidActivity extends Activity {
             initData();
             configurationService.setApplicationInitializationDone(true);
         }
+
+        expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
+
+        fillTable();
+
     }
 
     private void initData() {
@@ -107,7 +117,48 @@ public class HelloAndroidActivity extends Activity {
         for (BankAccount account : allBankAccounts){
             logger.info("Bank Account $1 / $2 --- customer ---> $1 $2", account.getBankName(), account.getIban(), account.getCustomer().getFirstName(), account.getCustomer().getLastName());
         }
+
+
+        // refill the data table
+        fillTable();
+
     }
 
+    /**
+     * fill the data trable
+     */
+    private void fillTable() {
+
+        final List<Customer> customers = customerDao.loadAll();
+        AccountExpandListAdapter adapter = new AccountExpandListAdapter(this, new ArrayList<Customer>(customers));
+
+        expandableListView.setAdapter(adapter);
+
+        expandableListView.setLongClickable(true);
+
+        expandableListView.setClickable(true);
+        // Handle the long click; hold the customer long to open the CustomerEditor Activity
+        expandableListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(HelloAndroidActivity.this, CustomerEditorActivity.class);
+                ArrayList<Customer> chList = new ArrayList<Customer>(customers);
+                Customer c = chList.get(position);
+
+                intent.putExtra("customerId", c.getId()); // pass the customer ID as parameter to the activity
+                HelloAndroidActivity.this.startActivity(intent);
+                return false;
+            }
+        });
+
+
+
+    }
+
+
+    public void onButtonNewClicked(View view) {
+        Intent intent = new Intent(HelloAndroidActivity.this, CustomerEditorActivity.class);
+        HelloAndroidActivity.this.startActivity(intent);
+    }
 }
 

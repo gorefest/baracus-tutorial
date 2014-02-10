@@ -12,7 +12,7 @@
 		<platform.version>4.0.1.2</platform.version>
 		<android.plugin.version>3.6.0</android.plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <baracus.version>0.6</baracus.version>
+        <baracus.version>0.7-SR1</baracus.version>
 	</properties>
 
 	<dependencies>
@@ -23,7 +23,7 @@
 			<scope>provided</scope>
 		</dependency>
         <dependency>
-            <groupId>net.mantucon.baracus</groupId>
+            <groupId>org.baracus</groupId>
             <artifactId>baracus-framework</artifactId>
             <version>${baracus.version}</version>
             <type>apklib</type>
