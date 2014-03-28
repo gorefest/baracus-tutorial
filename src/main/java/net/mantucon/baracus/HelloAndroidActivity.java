@@ -1,13 +1,17 @@
 package net.mantucon.baracus;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 import net.mantucon.baracus.annotations.Bean;
 import net.mantucon.baracus.application.ApplicationContext;
 import net.mantucon.baracus.dao.BankAccountDao;
@@ -18,6 +22,7 @@ import net.mantucon.baracus.orm.ObjectReference;
 import net.mantucon.baracus.service.BankAccountService;
 import net.mantucon.baracus.service.ConfigurationService;
 import net.mantucon.baracus.service.CustomerService;
+import net.mantucon.baracus.util.DBBackup;
 import net.mantucon.baracus.util.Logger;
 
 import java.util.ArrayList;
@@ -48,7 +53,7 @@ public class HelloAndroidActivity extends Activity {
 
     ExpandableListView expandableListView;
 
-
+    static String backupName;
 
     /**
      * Called when the activity is first created.
@@ -159,6 +164,44 @@ public class HelloAndroidActivity extends Activity {
     public void onButtonNewClicked(View view) {
         Intent intent = new Intent(HelloAndroidActivity.this, CustomerEditorActivity.class);
         HelloAndroidActivity.this.startActivity(intent);
+    }
+
+    public void onButtonBackupClicked(View view) {
+        DBBackup.BackupResult result = DBBackup.performDatabaseBackup();
+        if (result.isSuccessful()) {
+            showPopup(this, "Successfully backed up "+result.getSize()+" to file "+result.getBackupDbName());
+            backupName = result.getBackupDbName();
+        } else {
+            showPopup(this, "Backup failed :( Reason :"+result.getReason());
+        }
+    }
+
+
+    public static void showPopup(Context context, String message) {
+        AlertDialog.Builder popupBuilder = new AlertDialog.Builder(context);
+        TextView myMsg = new TextView(context);
+        myMsg.setGravity(Gravity.CENTER_HORIZONTAL);
+        myMsg.setText(message);
+        popupBuilder.setView(myMsg);
+        popupBuilder.show();
+    }
+
+    public void onButtonModifyClicked(View view) {
+        Customer janeDoe = new Customer();
+        janeDoe.setFirstName("Jane");
+        janeDoe.setLastName("Doe");
+        customerDao.save(janeDoe);
+        showPopup(this, "Added Jane Doe");
+        fillTable();
+    }
+
+    public void onBtnRestoreClicked(View view) {
+        DBBackup.BackupResult result = DBBackup.restore(backupName);
+        if (result.isSuccessful()) {
+            showPopup(this, "Restore completed successfully.");
+        } else {
+            showPopup(this, "Restore failed due to reason :" + result.getReason());
+        }
     }
 }
 

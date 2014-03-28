@@ -1,6 +1,7 @@
 package net.mantucon.baracus.service;
 
 import net.mantucon.baracus.annotations.Bean;
+import net.mantucon.baracus.context.BaracusApplicationContext;
 import net.mantucon.baracus.dao.ConfigurationDao;
 import net.mantucon.baracus.lifecycle.Destroyable;
 import net.mantucon.baracus.lifecycle.Initializeable;
@@ -55,16 +56,22 @@ public class ConfigurationService implements Initializeable, Destroyable{
 
     @Override
     public void onDestroy() {
-        ConfigurationParameter parameter= configurationDao.getByName(KEY_APP_LAST_START);
 
-        if (parameter == null) {
-            parameter = new ConfigurationParameter();
-            parameter.setConfigParameter(KEY_APP_LAST_START);
+        try {
+
+            ConfigurationParameter parameter= configurationDao.getByName(KEY_APP_LAST_START);
+
+            if (parameter == null) {
+                parameter = new ConfigurationParameter();
+                parameter.setConfigParameter(KEY_APP_LAST_START);
+            }
+
+            parameter.setConfigParameterValue(String.valueOf(lastStarted.getTime()));
+
+            configurationDao.save(parameter);
+        } catch (Exception e) {
+            // do nothing, this is nothing important
         }
-
-        parameter.setConfigParameterValue(String.valueOf(lastStarted.getTime()));
-
-        configurationDao.save(parameter);
 
     }
 
