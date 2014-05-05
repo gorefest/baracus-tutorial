@@ -15,7 +15,7 @@ import java.util.List;
 
 import static net.mantucon.baracus.model.BankAccount.bankNameCol;
 import static net.mantucon.baracus.model.BankAccount.customerIdCol;
-import static net.mantucon.baracus.model.BankAccount.ibanCol;
+import static net.mantucon.baracus.model.BankAccount.*;
 import static net.mantucon.baracus.orm.AbstractModelBase.idCol;
 
 /**
@@ -56,9 +56,11 @@ public class BankAccountDao extends BaseDao<BankAccount> {
         @Override
         public BankAccount from(Cursor c) {
             BankAccount result = new BankAccount();
+
             result.setId(c.getLong(idCol.fieldIndex));
             result.setIban(c.getString(ibanCol.fieldIndex));
             result.setBankName(c.getString(bankNameCol.fieldIndex));
+            result.setComment(c.getString(commentCol.fieldIndex));
 
             Long customerId = c.getLong(customerIdCol.fieldIndex);
             result.setCustomerReference(new LazyReference<Customer>(new ReferenceLoader<Customer>(customerDao, customerId)));
@@ -90,6 +92,11 @@ public class BankAccountDao extends BaseDao<BankAccount> {
             if (account.getCustomerReference() != null && account.getCustomerReference().getObjectRefId() != null) {
                 result.put(customerIdCol.fieldName, account.getCustomerReference().getObjectRefId());
             }
+
+           if (account.getComment() != null) {
+                result.put(BankAccount.commentCol.fieldName, account.getComment());
+            }
+
             return result;
         }
     };

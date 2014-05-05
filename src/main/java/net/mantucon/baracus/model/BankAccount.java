@@ -15,11 +15,13 @@ public class BankAccount extends AbstractModelBase {
     private String bankName;
     private String iban;
     private Reference<Customer> customerReference;
+    private String comment;
 
     public static final FieldList fieldList = new FieldList(BankAccount.class.getSimpleName());
     public static final Field bankNameCol = new Field("bank_name", columnIndex++);
     public static final Field ibanCol = new Field("iban", columnIndex++);
     public static final Field customerIdCol = new Field("customerId", columnIndex++);
+    public static final Field commentCol= new Field("comment", columnIndex++);
 
 
     static {
@@ -27,6 +29,7 @@ public class BankAccount extends AbstractModelBase {
         fieldList.add(bankNameCol);
         fieldList.add(ibanCol);
         fieldList.add(customerIdCol);
+        fieldList.add(commentCol);
     }
 
     public BankAccount() {
@@ -65,4 +68,11 @@ public class BankAccount extends AbstractModelBase {
         this.customerReference = new ObjectReference<Customer>(customer);
     }
 
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 }
