@@ -1,4 +1,4 @@
-package net.mantucon.baracus.service;
+package net.mantucon.baracustutorial.service;
 
 import net.mantucon.baracus.annotations.Bean;
 import net.mantucon.baracus.dao.ConfigurationDao;

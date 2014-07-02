@@ -1,18 +1,14 @@
-package net.mantucon.baracus;
+package net.mantucon.baracustutorial;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import net.mantucon.baracus.annotations.Bean;
-import net.mantucon.baracus.application.ApplicationContext;
 import net.mantucon.baracus.context.ManagedActivity;
-import net.mantucon.baracus.dao.CustomerDao;
-import net.mantucon.baracus.model.Customer;
-import net.mantucon.baracus.validation.ValidationFactory;
+import net.mantucon.baracustutorial.dao.CustomerDao;
+import net.mantucon.baracustutorial.model.Customer;
 
 /**
  * Created by marcus on 03.02.14.
@@ -28,11 +24,11 @@ public class CustomerEditorActivity extends ManagedActivity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-         setContentView(R.layout.customer_editor);
+         setContentView(net.mantucon.baracustutorial.R.layout.customer_editor);
         enableFocusChangeBasedValidation();
 
-        lastName = (TextView) findViewById(R.id.txtCustomerLastName);
-        firstName = (TextView) findViewById(R.id.txtCustomerFirstName);
+        lastName = (TextView) findViewById(net.mantucon.baracustutorial.R.id.txtCustomerLastName);
+        firstName = (TextView) findViewById(net.mantucon.baracustutorial.R.id.txtCustomerFirstName);
 
 
         // If we edit an existing customer, load the customer data
@@ -56,7 +52,7 @@ public class CustomerEditorActivity extends ManagedActivity {
             dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK)); // go back to caller
             finish();
         } else {
-            Toast.makeText(this, R.string.insufficientData, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, net.mantucon.baracustutorial.R.string.insufficientData, Toast.LENGTH_LONG).show();
         }
     }
 }

@@ -1,16 +1,13 @@
-package net.mantucon.baracus;
+package net.mantucon.baracustutorial;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
-import net.mantucon.baracus.application.ApplicationContext;
-import net.mantucon.baracus.model.BankAccount;
-import net.mantucon.baracus.model.Customer;
-import net.mantucon.baracus.signalling.DataChangeAwareComponent;
+import net.mantucon.baracustutorial.model.BankAccount;
+import net.mantucon.baracustutorial.model.Customer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,13 +62,13 @@ public class AccountExpandListAdapter extends BaseExpandableListAdapter {
 
         if (view == null) {
             LayoutInflater infalInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            view = infalInflater.inflate(R.layout.entries_list_child_item, null);
+            view = infalInflater.inflate(net.mantucon.baracustutorial.R.layout.entries_list_child_item, null);
         }
-        final TextView entryName = (TextView) view.findViewById(R.id.entryName);
+        final TextView entryName = (TextView) view.findViewById(net.mantucon.baracustutorial.R.id.entryName);
         entryName.setText(child.getBankName().toString());
 
 
-        final TextView entryValue = (TextView) view.findViewById(R.id.entryAccount);
+        final TextView entryValue = (TextView) view.findViewById(net.mantucon.baracustutorial.R.id.entryAccount);
         entryValue.setText(child.getIban());
 
         return view;
@@ -109,9 +106,9 @@ public class AccountExpandListAdapter extends BaseExpandableListAdapter {
         Customer group = (Customer) getGroup(groupPosition);
         if (view == null) {
             LayoutInflater inf = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            view = inf.inflate(R.layout.entries_list_group_item, null);
+            view = inf.inflate(net.mantucon.baracustutorial.R.layout.entries_list_group_item, null);
         }
-        TextView tv = (TextView) view.findViewById(R.id.tvGroup);
+        TextView tv = (TextView) view.findViewById(net.mantucon.baracustutorial.R.id.tvGroup);
         tv.setText(group.getLastName()+", "+group.getFirstName());
         return view;
     }
