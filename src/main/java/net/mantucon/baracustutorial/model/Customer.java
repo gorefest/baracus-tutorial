@@ -1,8 +1,8 @@
 package net.mantucon.baracustutorial.model;
 
-import net.mantucon.baracustutorial.orm.Field;
-import net.mantucon.baracustutorial.orm.FieldList;
-import net.mantucon.baracustutorial.orm.ModelBase;
+import net.mantucon.baracus.orm.Field;
+import net.mantucon.baracus.orm.FieldList;
+import net.mantucon.baracus.orm.ModelBase;
 
 import java.util.List;
 

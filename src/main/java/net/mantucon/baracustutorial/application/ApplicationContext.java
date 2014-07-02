@@ -1,6 +1,6 @@
 package net.mantucon.baracustutorial.application;
 
-import net.mantucon.baracustutorial.context.BaracusApplicationContext;
+import net.mantucon.baracus.context.BaracusApplicationContext;
 import net.mantucon.baracustutorial.dao.BankAccountDao;
 import net.mantucon.baracustutorial.dao.CustomerDao;
 import net.mantucon.baracustutorial.service.BankAccountService;

@@ -2,19 +2,20 @@ package net.mantucon.baracustutorial.dao;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import net.mantucon.baracustutorial.annotations.Bean;
+import net.mantucon.baracus.annotations.Bean;
+import net.mantucon.baracus.dao.BaseDao;
+import net.mantucon.baracus.orm.Field;
+import net.mantucon.baracus.orm.FieldList;
+import net.mantucon.baracus.orm.LazyReference;
+import net.mantucon.baracus.orm.ReferenceLoader;
 import net.mantucon.baracustutorial.model.BankAccount;
 import net.mantucon.baracustutorial.model.Customer;
-import net.mantucon.baracustutorial.orm.Field;
-import net.mantucon.baracustutorial.orm.FieldList;
-import net.mantucon.baracustutorial.orm.LazyReference;
-import net.mantucon.baracustutorial.orm.ReferenceLoader;
 
 import java.util.LinkedList;
 import java.util.List;
 
+import static net.mantucon.baracus.orm.ModelBase.idCol;
 import static net.mantucon.baracustutorial.model.BankAccount.*;
-import static net.mantucon.baracustutorial.orm.ModelBase.idCol;
 
 /**
  * Created with IntelliJ IDEA.

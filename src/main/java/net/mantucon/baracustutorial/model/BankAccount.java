@@ -1,6 +1,6 @@
 package net.mantucon.baracustutorial.model;
 
-import net.mantucon.baracustutorial.orm.*;
+import net.mantucon.baracus.orm.*;
 
 /**
  * Created with IntelliJ IDEA.

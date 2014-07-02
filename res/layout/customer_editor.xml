@@ -12,7 +12,7 @@
             android:text="@string/customerFirstName"
             android:id="@+id/customerFirstNameLabel" android:layout_gravity="center"/>
 
-    <net.mantucon.baracus.ui.ConstrainedEditText android:id="@+id/txtCustomerFirstName"
+    <net.mantucon.baracustutorial.ui.ConstrainedEditText android:id="@+id/txtCustomerFirstName"
                                                  android:layout_width="fill_parent"
                                                  android:layout_height="wrap_content"
                                                  app:validatedBy="stringNotEmpty"
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:text="@string/customerLastName"
             android:id="@+id/customerNameLabel" android:layout_gravity="center"/>
-    <net.mantucon.baracus.ui.ConstrainedEditText android:id="@+id/txtCustomerLastName"
+    <net.mantucon.baracustutorial.ui.ConstrainedEditText android:id="@+id/txtCustomerLastName"
                                                  android:layout_width="fill_parent"
                                                  android:layout_height="wrap_content"
                                                  app:validatedBy="stringNotEmpty"

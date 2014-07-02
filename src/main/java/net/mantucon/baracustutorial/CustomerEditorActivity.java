@@ -5,8 +5,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-import net.mantucon.baracustutorial.annotations.Bean;
-import net.mantucon.baracustutorial.context.ManagedActivity;
+import net.mantucon.baracus.annotations.Bean;
+import net.mantucon.baracus.context.ManagedActivity;
 import net.mantucon.baracustutorial.dao.CustomerDao;
 import net.mantucon.baracustutorial.model.Customer;
 

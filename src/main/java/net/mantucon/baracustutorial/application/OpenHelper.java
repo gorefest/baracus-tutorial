@@ -1,7 +1,7 @@
 package net.mantucon.baracustutorial.application;
 
 import android.content.Context;
-import net.mantucon.baracustutorial.dao.BaracusOpenHelper;
+import net.mantucon.baracus.dao.BaracusOpenHelper;
 import net.mantucon.baracustutorial.migr8.ModelVersion100;
 import net.mantucon.baracustutorial.migr8.ModelVersion101;
 import net.mantucon.baracustutorial.migr8.ModelVersion102;

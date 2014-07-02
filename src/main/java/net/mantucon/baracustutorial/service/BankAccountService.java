@@ -1,9 +1,9 @@
 package net.mantucon.baracustutorial.service;
 
-import net.mantucon.baracustutorial.annotations.Bean;
+import net.mantucon.baracus.annotations.Bean;
 import net.mantucon.baracustutorial.dao.BankAccountDao;
 import net.mantucon.baracustutorial.model.BankAccount;
-import net.mantucon.baracustutorial.util.Logger;
+import net.mantucon.baracus.util.Logger;
 
 /**
  * Created with IntelliJ IDEA.
