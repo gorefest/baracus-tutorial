@@ -1,7 +1,6 @@
-package net.mantucon.baracus.service;
+package net.mantucon.baracustutorial.service;
 
 import net.mantucon.baracus.annotations.Bean;
-import net.mantucon.baracus.context.BaracusApplicationContext;
 import net.mantucon.baracus.dao.ConfigurationDao;
 import net.mantucon.baracus.lifecycle.Destroyable;
 import net.mantucon.baracus.lifecycle.Initializeable;

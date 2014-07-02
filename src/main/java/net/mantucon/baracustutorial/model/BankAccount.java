@@ -1,4 +1,4 @@
-package net.mantucon.baracus.model;
+package net.mantucon.baracustutorial.model;
 
 import net.mantucon.baracus.orm.*;
 
@@ -6,27 +6,30 @@ import net.mantucon.baracus.orm.*;
  * Created with IntelliJ IDEA.
  * User: marcus
  */
-public class BankAccount extends AbstractModelBase {
+public class BankAccount extends ModelBase {
 
     public static final String TABLE_BANK_ACCOUNT = "bank_account";
 
-    private static int columnIndex= AbstractModelBase.fieldList.size();
+    private static int columnIndex= ModelBase.fieldList.size();
 
     private String bankName;
     private String iban;
     private Reference<Customer> customerReference;
+    private String comment;
 
     public static final FieldList fieldList = new FieldList(BankAccount.class.getSimpleName());
     public static final Field bankNameCol = new Field("bank_name", columnIndex++);
     public static final Field ibanCol = new Field("iban", columnIndex++);
     public static final Field customerIdCol = new Field("customerId", columnIndex++);
+    public static final Field commentCol= new Field("comment", columnIndex++);
 
 
     static {
-        fieldList.add(AbstractModelBase.fieldList);
+        fieldList.add(ModelBase.fieldList);
         fieldList.add(bankNameCol);
         fieldList.add(ibanCol);
         fieldList.add(customerIdCol);
+        fieldList.add(commentCol);
     }
 
     public BankAccount() {
@@ -65,4 +68,11 @@ public class BankAccount extends AbstractModelBase {
         this.customerReference = new ObjectReference<Customer>(customer);
     }
 
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 }
