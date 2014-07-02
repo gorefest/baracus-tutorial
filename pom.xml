@@ -9,21 +9,23 @@
 	<name>baracus-tutorial</name>
 
 	<properties>
+        <android.sdk.path>C:/adt-bundle-windows-x86-20130219/sdk</android.sdk.path>
+        <android.plugin.version>3.8.2</android.plugin.version>
+        <android.sdk.version>18</android.sdk.version>
 		<platform.version>4.0.1.2</platform.version>
-		<android.plugin.version>3.6.0</android.plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <baracus.version>0.6</baracus.version>
+        <baracus.version>0.8</baracus.version>
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.google.android</groupId>
-			<artifactId>android</artifactId>
-			<version>${platform.version}</version>
-			<scope>provided</scope>
-		</dependency>
         <dependency>
-            <groupId>net.mantucon.baracus</groupId>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>${platform.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.baracus</groupId>
             <artifactId>baracus-framework</artifactId>
             <version>${baracus.version}</version>
             <type>apklib</type>
@@ -42,16 +44,23 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
-			<plugin>
-				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
-				<artifactId>android-maven-plugin</artifactId>
-				<configuration>
-					<sdk>
-						<platform>14</platform>
-					</sdk>
-				</configuration>
-			</plugin>
-		</plugins>
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <version>${android.plugin.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <sdk>
+                        <platform>${android.sdk.version}</platform>
+                    </sdk>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+            </plugin>
+
+        </plugins>
 	</build>
 
     <repositories>
