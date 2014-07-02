@@ -1,11 +1,10 @@
-package net.mantucon.baracus.service;
+package net.mantucon.baracustutorial.service;
 
-import net.mantucon.baracus.annotations.Bean;
-import net.mantucon.baracus.context.BaracusApplicationContext;
-import net.mantucon.baracus.dao.ConfigurationDao;
-import net.mantucon.baracus.lifecycle.Destroyable;
-import net.mantucon.baracus.lifecycle.Initializeable;
-import net.mantucon.baracus.model.ConfigurationParameter;
+import net.mantucon.baracustutorial.annotations.Bean;
+import net.mantucon.baracustutorial.dao.ConfigurationDao;
+import net.mantucon.baracustutorial.lifecycle.Destroyable;
+import net.mantucon.baracustutorial.lifecycle.Initializeable;
+import net.mantucon.baracustutorial.model.ConfigurationParameter;
 
 import java.util.Date;
 

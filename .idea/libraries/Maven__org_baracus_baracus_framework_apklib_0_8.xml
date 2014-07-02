@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.baracus:baracus-framework:apklib:0.8">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/baracus/baracus-framework/0.8/baracus-framework-0.8.apklib!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/baracus/baracus-framework/0.8/baracus-framework-0.8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/baracus/baracus-framework/0.8/baracus-framework-0.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

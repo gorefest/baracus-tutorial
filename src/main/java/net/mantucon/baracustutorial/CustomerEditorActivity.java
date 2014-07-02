@@ -1,18 +1,14 @@
-package net.mantucon.baracus;
+package net.mantucon.baracustutorial;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-import net.mantucon.baracus.annotations.Bean;
-import net.mantucon.baracus.application.ApplicationContext;
-import net.mantucon.baracus.context.ManagedActivity;
-import net.mantucon.baracus.dao.CustomerDao;
-import net.mantucon.baracus.model.Customer;
-import net.mantucon.baracus.validation.ValidationFactory;
+import net.mantucon.baracustutorial.annotations.Bean;
+import net.mantucon.baracustutorial.context.ManagedActivity;
+import net.mantucon.baracustutorial.dao.CustomerDao;
+import net.mantucon.baracustutorial.model.Customer;
 
 /**
  * Created by marcus on 03.02.14.

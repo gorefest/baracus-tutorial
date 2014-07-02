@@ -1,21 +1,20 @@
-package net.mantucon.baracus.model;
+package net.mantucon.baracustutorial.model;
 
-import net.mantucon.baracus.orm.AbstractModelBase;
-import net.mantucon.baracus.orm.Field;
-import net.mantucon.baracus.orm.FieldList;
+import net.mantucon.baracustutorial.orm.Field;
+import net.mantucon.baracustutorial.orm.FieldList;
+import net.mantucon.baracustutorial.orm.ModelBase;
 
-import java.util.Collection;
 import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
  * User: marcus
  */
-public class Customer extends AbstractModelBase {
+public class Customer extends ModelBase {
 
     public static final String TABLE_CUSTOMER = "customer";
 
-    private static int columnIndex= AbstractModelBase.fieldList.size();
+    private static int columnIndex= ModelBase.fieldList.size();
 
     private String lastName;
     private String firstName;
@@ -27,7 +26,7 @@ public class Customer extends AbstractModelBase {
 
 
     static {
-        fieldList.add(AbstractModelBase.fieldList);
+        fieldList.add(ModelBase.fieldList);
         fieldList.add(lastNameCol);
         fieldList.add(firstNameCol);
     }
