@@ -3,9 +3,7 @@ package net.mantucon.baracustutorial.application;
 import net.mantucon.baracus.context.BaracusApplicationContext;
 import net.mantucon.baracustutorial.dao.BankAccountDao;
 import net.mantucon.baracustutorial.dao.CustomerDao;
-import net.mantucon.baracustutorial.service.BankAccountService;
-import net.mantucon.baracustutorial.service.ConfigurationService;
-import net.mantucon.baracustutorial.service.CustomerService;
+import net.mantucon.baracustutorial.service.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,6 +21,8 @@ public class ApplicationContext extends BaracusApplicationContext {
         registerBeanClass(BankAccountService.class);
 
         registerBeanClass(ConfigurationService.class);
+
+        setApplicationContextInitializer(new AfterContextInitialized());
     }
 
 }

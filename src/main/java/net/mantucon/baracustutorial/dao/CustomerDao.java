@@ -9,6 +9,7 @@ import net.mantucon.baracus.orm.FieldList;
 import net.mantucon.baracus.orm.LazyCollection;
 import net.mantucon.baracustutorial.model.BankAccount;
 import net.mantucon.baracustutorial.model.Customer;
+import net.mantucon.baracustutorial.service.BankAccountLoadService;
 
 import java.util.List;
 
@@ -23,7 +24,7 @@ import static net.mantucon.baracus.orm.ModelBase.idCol;
 public class CustomerDao extends BaseDao<Customer> {
 
     @Bean
-    BankAccountDao bankAccountDao;
+    BankAccountLoadService bankAccountLoadService;
 
     /**
      * Lock the DAO of
@@ -45,7 +46,7 @@ public class CustomerDao extends BaseDao<Customer> {
             result.setAccounts(new LazyCollection<BankAccount>(new LazyCollection.LazyLoader<BankAccount>() {
                 @Override
                 public List<BankAccount> loadReference() {
-                    return bankAccountDao.getByCustomerId(id);
+                    return bankAccountLoadService.loadAllAccountsByCustomerId(id);
                 }
             }));
 
