@@ -1,4 +1,4 @@
-package net.mantucon.baracus.model;
+package net.mantucon.baracustutorial.model;
 
 import net.mantucon.baracus.orm.*;
 
@@ -6,11 +6,11 @@ import net.mantucon.baracus.orm.*;
  * Created with IntelliJ IDEA.
  * User: marcus
  */
-public class BankAccount extends AbstractModelBase {
+public class BankAccount extends ModelBase {
 
     public static final String TABLE_BANK_ACCOUNT = "bank_account";
 
-    private static int columnIndex= AbstractModelBase.fieldList.size();
+    private static int columnIndex= ModelBase.fieldList.size();
 
     private String bankName;
     private String iban;
@@ -25,7 +25,7 @@ public class BankAccount extends AbstractModelBase {
 
 
     static {
-        fieldList.add(AbstractModelBase.fieldList);
+        fieldList.add(ModelBase.fieldList);
         fieldList.add(bankNameCol);
         fieldList.add(ibanCol);
         fieldList.add(customerIdCol);

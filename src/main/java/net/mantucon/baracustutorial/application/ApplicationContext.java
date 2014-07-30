@@ -1,12 +1,11 @@
-package net.mantucon.baracus.application;
+package net.mantucon.baracustutorial.application;
 
 import net.mantucon.baracus.context.BaracusApplicationContext;
-import net.mantucon.baracus.dao.BankAccountDao;
-import net.mantucon.baracus.dao.BaracusOpenHelper;
-import net.mantucon.baracus.dao.CustomerDao;
-import net.mantucon.baracus.service.BankAccountService;
-import net.mantucon.baracus.service.ConfigurationService;
-import net.mantucon.baracus.service.CustomerService;
+import net.mantucon.baracustutorial.dao.BankAccountDao;
+import net.mantucon.baracustutorial.dao.CustomerDao;
+import net.mantucon.baracustutorial.service.BankAccountService;
+import net.mantucon.baracustutorial.service.ConfigurationService;
+import net.mantucon.baracustutorial.service.CustomerService;
 
 /**
  * Created with IntelliJ IDEA.

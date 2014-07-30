@@ -1,16 +1,14 @@
-package net.mantucon.baracus;
+package net.mantucon.baracustutorial;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
-import net.mantucon.baracus.application.ApplicationContext;
-import net.mantucon.baracus.model.BankAccount;
-import net.mantucon.baracus.model.Customer;
-import net.mantucon.baracus.signalling.DataChangeAwareComponent;
+import net.mantucon.baracustutorial.R;
+import net.mantucon.baracustutorial.model.BankAccount;
+import net.mantucon.baracustutorial.model.Customer;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,11 +1,10 @@
-package net.mantucon.baracus;
+package net.mantucon.baracustutorial;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
@@ -13,17 +12,15 @@ import android.widget.AdapterView;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 import net.mantucon.baracus.annotations.Bean;
-import net.mantucon.baracus.application.ApplicationContext;
-import net.mantucon.baracus.dao.BankAccountDao;
-import net.mantucon.baracus.dao.CustomerDao;
-import net.mantucon.baracus.model.BankAccount;
-import net.mantucon.baracus.model.Customer;
-import net.mantucon.baracus.orm.ObjectReference;
-import net.mantucon.baracus.service.BankAccountService;
-import net.mantucon.baracus.service.ConfigurationService;
-import net.mantucon.baracus.service.CustomerService;
 import net.mantucon.baracus.util.DBBackup;
 import net.mantucon.baracus.util.Logger;
+import net.mantucon.baracustutorial.dao.BankAccountDao;
+import net.mantucon.baracustutorial.dao.CustomerDao;
+import net.mantucon.baracustutorial.model.BankAccount;
+import net.mantucon.baracustutorial.model.Customer;
+import net.mantucon.baracustutorial.service.BankAccountService;
+import net.mantucon.baracustutorial.service.ConfigurationService;
+import net.mantucon.baracustutorial.service.CustomerService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -101,7 +98,7 @@ public class HelloAndroidActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 	// Inflate the menu; this adds items to the action bar if it is present.
-	getMenuInflater().inflate(net.mantucon.baracus.R.menu.main, menu);
+	getMenuInflater().inflate(net.mantucon.baracustutorial.R.menu.main, menu);
 	return true;
     }
 
