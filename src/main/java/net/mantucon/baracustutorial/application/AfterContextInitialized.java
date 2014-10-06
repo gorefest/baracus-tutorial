@@ -4,6 +4,7 @@ import net.mantucon.baracus.lifecycle.ApplicationContextInitializer;
 import net.mantucon.baracustutorial.service.BankAccountLoadService;
 import net.mantucon.baracustutorial.service.BankAccountLoadServiceImpl1;
 import net.mantucon.baracustutorial.service.BankAccountLoadServiceImpl2;
+import net.mantucon.baracustutorial.validation.NameValidator;
 
 import java.util.Date;
 
@@ -24,7 +25,9 @@ public class AfterContextInitialized implements ApplicationContextInitializer {
             }
 
             reinit = false;
-            ApplicationContext.reinitializeContext();;
+            ApplicationContext.reinitializeContext();
+            ApplicationContext.registerValidator(new NameValidator());
+
         }
     }
 }

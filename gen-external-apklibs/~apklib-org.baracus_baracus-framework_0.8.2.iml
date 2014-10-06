@@ -3,22 +3,22 @@
   <component name="FacetManager">
     <facet type="android" name="Android">
       <configuration>
-        <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/org.baracus_baracus-framework_0.8.1/gen" />
-        <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/org.baracus_baracus-framework_0.8.1/gen" />
-        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/org.baracus_baracus-framework_0.8.1/AndroidManifest.xml" />
-        <option name="RES_FOLDER_RELATIVE_PATH" value="/org.baracus_baracus-framework_0.8.1/res" />
-        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/org.baracus_baracus-framework_0.8.1/assets" />
-        <option name="LIBS_FOLDER_RELATIVE_PATH" value="/org.baracus_baracus-framework_0.8.1/libs" />
+        <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/org.baracus_baracus-framework_0.8.2/gen" />
+        <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/org.baracus_baracus-framework_0.8.2/gen" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/org.baracus_baracus-framework_0.8.2/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/org.baracus_baracus-framework_0.8.2/res" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/org.baracus_baracus-framework_0.8.2/assets" />
+        <option name="LIBS_FOLDER_RELATIVE_PATH" value="/org.baracus_baracus-framework_0.8.2/libs" />
         <option name="LIBRARY_PROJECT" value="true" />
-        <option name="PROGUARD_LOGS_FOLDER_RELATIVE_PATH" value="/org.baracus_baracus-framework_0.8.1/proguard_logs" />
+        <option name="PROGUARD_LOGS_FOLDER_RELATIVE_PATH" value="/org.baracus_baracus-framework_0.8.2/proguard_logs" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/org.baracus_baracus-framework_0.8.1">
-      <sourceFolder url="file://$MODULE_DIR$/org.baracus_baracus-framework_0.8.1/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/org.baracus_baracus-framework_0.8.1/gen" isTestSource="false" generated="true" />
+    <content url="file://$MODULE_DIR$/org.baracus_baracus-framework_0.8.2">
+      <sourceFolder url="file://$MODULE_DIR$/org.baracus_baracus-framework_0.8.2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/org.baracus_baracus-framework_0.8.2/gen" isTestSource="false" generated="true" />
     </content>
     <orderEntry type="jdk" jdkName="Maven Android 4.0 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

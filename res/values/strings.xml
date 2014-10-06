@@ -9,5 +9,6 @@
     <string name="customerLastName">Last Name</string>
     <string name="saveCustomer">save customer</string>
     <string name="insufficientData">Insufficient Data. Pleas correct values and try again!</string>
+    <string name="nameViolation">Bad string format. Must be lowercase with starting capital letter</string>
 
 </resources>
