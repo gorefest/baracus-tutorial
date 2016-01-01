@@ -1,6 +1,6 @@
-package net.mantucon.baracustutorial.service;
+package org.baracustutorial.service;
 
-import net.mantucon.baracustutorial.model.BankAccount;
+import org.baracustutorial.model.BankAccount;
 
 import java.util.List;
 

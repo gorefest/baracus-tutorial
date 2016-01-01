@@ -1,15 +1,15 @@
-package net.mantucon.baracustutorial;
+package org.baracustutorial;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-import net.mantucon.baracustutorial.R;
-import net.mantucon.baracus.annotations.Bean;
-import net.mantucon.baracus.context.ManagedActivity;
-import net.mantucon.baracustutorial.dao.CustomerDao;
-import net.mantucon.baracustutorial.model.Customer;
+import org.baracustutorial.R;
+import org.baracus.annotations.Bean;
+import org.baracus.context.ManagedActivity;
+import org.baracustutorial.dao.CustomerDao;
+import org.baracustutorial.model.Customer;
 
 /**
  * Created by marcus on 03.02.14.

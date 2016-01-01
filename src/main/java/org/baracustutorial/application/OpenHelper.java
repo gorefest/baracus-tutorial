@@ -1,11 +1,11 @@
-package net.mantucon.baracustutorial.application;
+package org.baracustutorial.application;
 
 import android.content.Context;
-import net.mantucon.baracus.dao.BaracusOpenHelper;
-import net.mantucon.baracustutorial.migr8.ModelVersion100;
-import net.mantucon.baracustutorial.migr8.ModelVersion101;
-import net.mantucon.baracustutorial.migr8.ModelVersion102;
-import net.mantucon.baracustutorial.migr8.ModelVersion103;
+import org.baracus.dao.BaracusOpenHelper;
+import org.baracustutorial.migr8.ModelVersion100;
+import org.baracustutorial.migr8.ModelVersion101;
+import org.baracustutorial.migr8.ModelVersion102;
+import org.baracustutorial.migr8.ModelVersion103;
 
 /**
  * Created with IntelliJ IDEA.

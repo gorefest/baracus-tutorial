@@ -2,19 +2,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>net.mantucon.baracus</groupId>
+	<groupId>org.baracus</groupId>
 	<artifactId>baracus-tutorial</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>apk</packaging>
 	<name>baracus-tutorial</name>
 
 	<properties>
-        <android.sdk.path>C:/adt-bundle-windows-x86-20130219/sdk</android.sdk.path>
+        <android.sdk.path>C:/Entwicklung/android-sdk</android.sdk.path>
         <android.plugin.version>3.8.2</android.plugin.version>
         <android.sdk.version>18</android.sdk.version>
 		<platform.version>4.0.1.2</platform.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <baracus.version>0.8.2</baracus.version>
+        <baracus.version>0.9.5-SNAPSHOT</baracus.version>
 	</properties>
 
 	<dependencies>
@@ -81,7 +81,7 @@
         <profile>
             <id>windows</id>
             <properties>
-                <android.sdk.path>C:/adt-bundle-windows-x86-20130219/sdk</android.sdk.path>
+                <android.sdk.path>C:/Entwicklung/android-sdk</android.sdk.path>
             </properties>
         </profile>
 

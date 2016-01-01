@@ -1,4 +1,4 @@
-package net.mantucon.baracustutorial;
+package org.baracustutorial;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -11,16 +11,16 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
-import net.mantucon.baracus.annotations.Bean;
-import net.mantucon.baracus.util.DBBackup;
-import net.mantucon.baracus.util.Logger;
-import net.mantucon.baracustutorial.dao.BankAccountDao;
-import net.mantucon.baracustutorial.dao.CustomerDao;
-import net.mantucon.baracustutorial.model.BankAccount;
-import net.mantucon.baracustutorial.model.Customer;
-import net.mantucon.baracustutorial.service.BankAccountService;
-import net.mantucon.baracustutorial.service.ConfigurationService;
-import net.mantucon.baracustutorial.service.CustomerService;
+import org.baracus.annotations.Bean;
+import org.baracus.util.DBBackup;
+import org.baracus.util.Logger;
+import org.baracustutorial.dao.BankAccountDao;
+import org.baracustutorial.dao.CustomerDao;
+import org.baracustutorial.model.BankAccount;
+import org.baracustutorial.model.Customer;
+import org.baracustutorial.service.BankAccountService;
+import org.baracustutorial.service.ConfigurationService;
+import org.baracustutorial.service.CustomerService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -98,7 +98,7 @@ public class HelloAndroidActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 	// Inflate the menu; this adds items to the action bar if it is present.
-	getMenuInflater().inflate(net.mantucon.baracustutorial.R.menu.main, menu);
+	getMenuInflater().inflate(org.baracustutorial.R.menu.main, menu);
 	return true;
     }
 

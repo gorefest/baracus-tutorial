@@ -1,10 +1,10 @@
-package net.mantucon.baracustutorial.application;
+package org.baracustutorial.application;
 
-import net.mantucon.baracus.lifecycle.ApplicationContextInitializer;
-import net.mantucon.baracustutorial.service.BankAccountLoadService;
-import net.mantucon.baracustutorial.service.BankAccountLoadServiceImpl1;
-import net.mantucon.baracustutorial.service.BankAccountLoadServiceImpl2;
-import net.mantucon.baracustutorial.validation.NameValidator;
+import org.baracus.lifecycle.ApplicationContextInitializer;
+import org.baracustutorial.service.BankAccountLoadService;
+import org.baracustutorial.service.BankAccountLoadServiceImpl1;
+import org.baracustutorial.service.BankAccountLoadServiceImpl2;
+import org.baracustutorial.validation.NameValidator;
 
 import java.util.Date;
 

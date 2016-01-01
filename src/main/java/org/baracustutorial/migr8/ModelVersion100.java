@@ -1,9 +1,9 @@
-package net.mantucon.baracustutorial.migr8;
+package org.baracustutorial.migr8;
 
 import android.database.sqlite.SQLiteDatabase;
-import net.mantucon.baracus.migr8.MigrationStep;
-import net.mantucon.baracustutorial.model.BankAccount;
-import net.mantucon.baracus.util.Logger;
+import org.baracus.migr8.MigrationStep;
+import org.baracustutorial.model.BankAccount;
+import org.baracus.util.Logger;
 
 /**
  * Created with IntelliJ IDEA.

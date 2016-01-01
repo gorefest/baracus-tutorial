@@ -1,4 +1,4 @@
-package net.mantucon.baracustutorial;
+package org.baracustutorial;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -6,9 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
-import net.mantucon.baracustutorial.R;
-import net.mantucon.baracustutorial.model.BankAccount;
-import net.mantucon.baracustutorial.model.Customer;
+import org.baracustutorial.R;
+import org.baracustutorial.model.BankAccount;
+import org.baracustutorial.model.Customer;
 
 import java.util.ArrayList;
 import java.util.List;

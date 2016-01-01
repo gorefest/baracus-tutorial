@@ -1,8 +1,8 @@
-package net.mantucon.baracustutorial.validation;
+package org.baracustutorial.validation;
 
-import net.mantucon.baracus.validation.AbstractValidator;
-import net.mantucon.baracus.validation.ConstrainedView;
-import net.mantucon.baracustutorial.R;
+import org.baracus.validation.AbstractValidator;
+import org.baracus.validation.ConstrainedView;
+import org.baracustutorial.R;
 
 /**
  * Created by marcus on 30.09.14.
